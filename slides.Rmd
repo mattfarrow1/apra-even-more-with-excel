@@ -1,0 +1,52 @@
+---
+title: 'Even More with Excel'
+author: Matt Farrow
+date: "November 13, 2019"
+output:
+  xaringan::moon_reader:
+  lib_dir: libs
+  nature:
+    highlightStyle: github
+    highlightLines: true
+    countIncrementalSlides: false
+---
+
+# To Recap
+
+.pull-left[
+
+### [2017 Presentation](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
+
+]
+
+.pull-right[
+
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm">via GIPHY</a></p>
+
+]
+
+---
+
+# Pivot Tables
+
+<div style="width:75%;height:0;padding-bottom:55%;position:relative;"><iframe src="https://giphy.com/embed/bEVKYB487Lqxy" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/bEVKYB487Lqxy">via GIPHY</a></p>
+
+---
+
+## Don't Panic!
+
+We've got this.
+
+<div style="width:75%;height:0;padding-bottom:46%;position:relative;"><iframe src="https://giphy.com/embed/Lm63QU87HvgVEuTV63" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/game-of-thrones-hbo-lets-do-this-Lm63QU87HvgVEuTV63">via GIPHY</a></p>
+
+---
+
+# What is a pivot table?
+
+> A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data.
+
+.right[*[Microsoft](https://support.office.com/en-us/article/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Windows)*]
+
+
+
+---
