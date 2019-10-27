@@ -1,5 +1,5 @@
 ---
-title: 'Even More with Excel'
+title: 'I Should Have Majored in Excel'
 author: Matt Farrow
 date: "November 13, 2019"
 output:
@@ -11,11 +11,15 @@ output:
     countIncrementalSlides: false
 ---
 
-# To Recap
+class: middle
 
 .pull-left[
 
-### [2017 Presentation](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
+## [haven't we been here before?](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
+
+slides for this presentation as well as 2017's are available at:
+
+[formalizedcuriosity.net/talk](https://www.formalizedcuriosity.net)
 
 ]
 
@@ -27,15 +31,32 @@ output:
 
 ---
 
+class: center, middle, inverse
+
+## <blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">What <a href="https://twitter.com/hashtag/Excel?src=hash&amp;ref_src=twsrc%5Etfw">#Excel</a> function/formula are you most proud of mastering?</p>&mdash; Microsoft Excel (@msexcel) <a href="https://twitter.com/msexcel/status/1187369905290649600?ref_src=twsrc%5Etfw">October 24, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+---
+
+# Most Popular Responses
+
+- VLOOKUP
+- Pivot Tables
+- Index+Match
+
+---
+
+
 # Pivot Tables
+
+Less of this.
 
 <div style="width:75%;height:0;padding-bottom:55%;position:relative;"><iframe src="https://giphy.com/embed/bEVKYB487Lqxy" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/bEVKYB487Lqxy">via GIPHY</a></p>
 
 ---
 
-## Don't Panic!
+# Pivot Tables
 
-We've got this.
+More of this.
 
 <div style="width:75%;height:0;padding-bottom:46%;position:relative;"><iframe src="https://giphy.com/embed/Lm63QU87HvgVEuTV63" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/game-of-thrones-hbo-lets-do-this-Lm63QU87HvgVEuTV63">via GIPHY</a></p>
 
@@ -47,6 +68,12 @@ We've got this.
 
 .right[*[Microsoft](https://support.office.com/en-us/article/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Windows)*]
 
+---
 
+# VLOOKUP
+
+---
+
+# Index + Match
 
 ---
