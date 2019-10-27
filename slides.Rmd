@@ -6,6 +6,7 @@ output:
   xaringan::moon_reader:
   lib_dir: libs
   nature:
+    beforeInit: "macros.js"
     highlightStyle: github
     highlightLines: true
     countIncrementalSlides: false
@@ -81,7 +82,7 @@ More of this.
 
 .pull-right[
 
-![](https://support.content.office.net/en-us/media/095beeee-8781-4b14-be42-9b05e9aff8d3.png)
+![:scale 50%](https://support.content.office.net/en-us/media/095beeee-8781-4b14-be42-9b05e9aff8d3.png)
 
 ]
 
