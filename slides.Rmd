@@ -6,28 +6,38 @@ output:
   xaringan::moon_reader:
   lib_dir: libs
   nature:
-    beforeInit: "macros.js"
     highlightStyle: github
     highlightLines: true
     countIncrementalSlides: false
 ---
 
 background-color: #053C5E
-class: middle
-
+ 
 .pull-left[
 
 ## [haven't we been here before?](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
 
-<font color=white>slides for this presentation as well as 2017's are available at:</font>
+### <font color=white>2017 Talk Included:
 
-[formalizedcuriosity.net/talk](https://www.formalizedcuriosity.net)
+- VLOOKUP
+- CONCAT
+- DATEDIF
+- YEAR
+- RAND
+- Macros
+- Pivot Tables
+
+And more!
+
+</font>
 
 ]
 
 .pull-right[
+  
+<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm"></a></p>
 
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm">via GIPHY</a></p>
+.right[<font color=#A31621>*Giphy*</font>]
 
 ]
 
@@ -37,29 +47,28 @@ class: center, middle, inverse
 
 ## <blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">What <a href="https://twitter.com/hashtag/Excel?src=hash&amp;ref_src=twsrc%5Etfw">#Excel</a> function/formula are you most proud of mastering?</p>&mdash; Microsoft Excel (@msexcel) <a href="https://twitter.com/msexcel/status/1187369905290649600?ref_src=twsrc%5Etfw">October 24, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
----
+???
 
-# Most Popular Responses
-
+Top Responses:
 - VLOOKUP
 - Pivot Tables
-- Index+Match
+- INDEX + MATCH
 
 ---
 
-# Pivot Tables
+## New leadership is staffing a regional team and you want to set them up for success.
 
-Less of this.
+![dilbert](https://assets.amuniversal.com/9c8f3f909160012ee3c400163e41dd5b)
 
-<div style="width:75%;height:0;padding-bottom:55%;position:relative;"><iframe src="https://giphy.com/embed/bEVKYB487Lqxy" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/bEVKYB487Lqxy">via GIPHY</a></p>
+.right[[Dilbert by Scott Adams](https://dilbert.com/strip/2011-08-17)]
 
 ---
 
-# Pivot Tables
+# To the database!
 
-More of this.
+<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/3otPoQ1h8b9nQwNNsY" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/gilmoregirls-netflix-gilmore-girls-3otPoQ1h8b9nQwNNsY"></a></p>
 
-<div style="width:75%;height:0;padding-bottom:46%;position:relative;"><iframe src="https://giphy.com/embed/Lm63QU87HvgVEuTV63" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/game-of-thrones-hbo-lets-do-this-Lm63QU87HvgVEuTV63">via GIPHY</a></p>
+.right[<font color=#A31621>*Giphy*</font>]
 
 ---
 
@@ -71,34 +80,53 @@ More of this.
 
 ---
 
-# Pivot Tables
+# Where does the data fight us?
 
-.pull-left[
+???
 
-![insert pivot table](https://support.content.office.net/en-us/media/d9736d3a-65b2-40d4-8715-3c814bdf464b.png)
+Present too much data and users will get lost in the weeds and not see the forest for the trees.
 
-![define pivot table](https://support.content.office.net/en-us/media/04bea9cf-04a3-403d-8a37-793241c177d2.png)
-]
-
-.pull-right[
-
-![:scale 50%](https://support.content.office.net/en-us/media/095beeee-8781-4b14-be42-9b05e9aff8d3.png)
-
-]
-
-
-.right[*source: [Microsoft](https://support.office.com/en-us/article/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576)*]
+- Constituency
+- Ratings
+- States
+- Giving
 
 ---
 
-# VLOOKUP
+class: center, middle, inverse
+
+# To present less data, we must first create more data.
+
+<div style="width:50%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/UvwI1X7XkbXq0" width="50%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/firefly-drawing-motivation-UvwI1X7XkbXq0"></a></p>
+
+.right[<font color=#A31621>*Giphy*</font>]
 
 ---
 
-# Index + Match
+# VLOOKUP!
 
-Older, more powerful brother of VLOOKUP.
+Buckets for:
 
-Image of Thor & Loki
+- Constituency
+- Rating
+- Region
+- Giving
+
+---
+
+# Pivot Table Summary
+
+Clean up.
+Multiple per page.
+
+---
+
+class: center, middle, inverse
+
+# Questions?
+
+## Matt Farrow
+
+### [Formalized Curiosity](https://formalizedcuriosity.net)
 
 ---
