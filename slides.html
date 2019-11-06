@@ -20,11 +20,19 @@ class: center, middle, inverse, title-slide
 ---
 
 
-class: middle, center, inverse
+class: center, middle
+
+## Slides for this talk:
+
+# [formalizedcuriosity.net](https://formalizedcuriosity.net/talk/)
+
+---
+
+class: inverse
 
 background-color: #053C5E
 
-## [haven't we been here before?](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
+# [This seems familiar...](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
 
 .pull-left[
 
@@ -40,11 +48,15 @@ And more!
 
 .pull-right[
   
-&lt;div style="width:75%;height:0;padding-bottom:100%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div style="width:100%;height:0;padding-bottom:100%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm"&gt;&lt;/a&gt;&lt;/p&gt;
 
 .right[&lt;font color=#A31621&gt;*Giphy*&lt;/font&gt;]
 
 ]
+
+???
+
+When thinking about what I could cover in 30 minutes, I decided to put out a Twitter poll asking for suggestions, but thought I'd check the MS Excel Twitter account first...
 
 ---
 
@@ -54,6 +66,8 @@ class: center, middle, inverse
 
 ---
 
+background-color: #23001E
+
 class: center, middle, inverse
 
 # VLOOKUP
@@ -61,6 +75,10 @@ class: center, middle, inverse
 # Pivot Tables
 
 # INDEX + MATCH
+
+???
+
+This talk is going to focus on the first two. Index + Match is an incredibly powerful combination, but may be on the way out with the announcement of XLOOKUP.
 
 ---
 
@@ -80,26 +98,120 @@ class: center, middle
 
 .right[*[Microsoft](https://support.office.com/en-us/article/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Windows)*]
 
-.center[![](https://media.giphy.com/media/4ZodeEffXWzfBs0aWG/source.mp4)]
+&lt;div style="width:100%;height:0;padding-bottom:56%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/4ZodeEffXWzfBs0aWG?video=0" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/prince-harry-meghan-markle-its-magic-4ZodeEffXWzfBs0aWG"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
 
 ---
 
-class: center, middle, inverse
+# More Data = Less Data
 
-# Where does the data fight us?
+.pull-left[
 
---
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Column Name &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Lookup ID &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Rating &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Lifetime Giving &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Constituency &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Prospect Manager &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Prospect Status &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; County &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ST &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Metro Area &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-### To present less data, we must first create more data.
+]
 
-???
+.pull-right[
 
-Present too much data and users will get lost in the weeds and not see the forest for the trees.
+&lt;div style="width:100%;height:0;padding-bottom:100%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/KEZH6eEMTHjBD7H6wj" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/tvland-tv-land-golden-girls-goldengirls-KEZH6eEMTHjBD7H6wj"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
 
-- Constituency
-- Ratings
-- States
-- Giving
+]
+
+---
+
+# More Data = Less Data
+
+.pull-left[
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Column Name &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Lookup ID &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Rating &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Rating Bucket &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Lifetime Giving &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Giving Bucket &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Constituency &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Constituency Bucket &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Prospect Manager &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Prospect Status &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; County &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ST &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Region &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Metro Area &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right[
+
+&lt;div style="width:100%;height:0;padding-bottom:49%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/5gw0VWGbgNm8w" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/5gw0VWGbgNm8w"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+]
 
 ---
 
@@ -125,6 +237,47 @@ Buckets for:
 - Rating
 - Region
 - Giving
+
+---
+
+# Before we begin...
+
+## .center[absolute/relative references]
+
+.pull-left[
+
+Relative references **can** move.
+
+.center[`A1`]
+
+Absolute references **can't** move.
+
+.center[`$A$1`]
+
+]
+
+.pull-right[
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; $A$2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; The column and the row do not change when copied. &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; A$2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; The row does not change when copied. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; $A2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; The column does not change when copied. &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
 
 ---
 
@@ -168,7 +321,11 @@ Buckets for:
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Non-Alum Spouse of Alumni &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Parent - Current &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Parent &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Parent - Past &lt;/td&gt;
@@ -190,45 +347,6 @@ Buckets for:
 &lt;/table&gt;
 
 .center[*`=VLOOKUP(B2,Constituency!A1:$B$14,2,FALSE)`*]
-
----
-
-# absolute/relative references
-
-.pull-left[
-
-Relative references **can** move.
-
-.center[`A1`]
-
-Absolute references **can't** move.
-
-.center[`$A$1`]
-
-]
-
-.pull-right[
-
-&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; $A$2 &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; The column and the row do not change when copied. &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; A$2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; The row does not change when copied. &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; $A2 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; The column does not change when copied. &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-]
 
 ---
 
@@ -339,7 +457,7 @@ class: center, middle, inverse
 
 ## Matt Farrow
 
-### [Formalized Curiosity](https://formalizedcuriosity.net)
+### [formalizedcuriosity.net](https://formalizedcuriosity.net)
 
 ---
     </textarea>
