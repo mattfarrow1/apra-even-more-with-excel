@@ -7,6 +7,7 @@
     <meta name="date" content="2019-11-13" />
     <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="slides_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="slides_files/kePrint-0.0.1/kePrint.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -19,11 +20,13 @@ class: center, middle, inverse, title-slide
 ---
 
 
+class: middle, center
+
 background-color: #053C5E
- 
-.pull-left[
 
 ## [haven't we been here before?](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
+
+.pull-left[
 
 ### &lt;font color=white&gt;2017 Talk Included:
 
@@ -43,7 +46,7 @@ And more!
 
 .pull-right[
   
-&lt;div style="width:100%;height:0;padding-bottom:100%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div style="width:75%;height:0;padding-bottom:100%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/l378xfLmpwfnkeIrm" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/HallmarkChannel-cute-lovestruckcafe-l378xfLmpwfnkeIrm"&gt;&lt;/a&gt;&lt;/p&gt;
 
 .right[&lt;font color=#A31621&gt;*Giphy*&lt;/font&gt;]
 
@@ -55,14 +58,19 @@ class: center, middle, inverse
 
 ## &lt;blockquote class="twitter-tweet" data-theme="light"&gt;&lt;p lang="en" dir="ltr"&gt;What &lt;a href="https://twitter.com/hashtag/Excel?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#Excel&lt;/a&gt; function/formula are you most proud of mastering?&lt;/p&gt;&amp;mdash; Microsoft Excel (@msexcel) &lt;a href="https://twitter.com/msexcel/status/1187369905290649600?ref_src=twsrc%5Etfw"&gt;October 24, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
-???
+---
 
-Top Responses:
-- VLOOKUP
-- Pivot Tables
-- INDEX + MATCH
+class: center, middle, inverse
+
+# VLOOKUP
+
+# Pivot Tables
+
+# INDEX + MATCH
 
 ---
+
+class: center, middle
 
 ## New leadership is staffing a regional team and you want to set them up for success.
 
@@ -72,23 +80,23 @@ Top Responses:
 
 ---
 
-# To the database!
-
-&lt;div style="width:100%;height:0;padding-bottom:75%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/3otPoQ1h8b9nQwNNsY" width="75%" height="75%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/gilmoregirls-netflix-gilmore-girls-3otPoQ1h8b9nQwNNsY"&gt;&lt;/a&gt;&lt;/p&gt;
-
-.right[&lt;font color=#A31621&gt;*Giphy*&lt;/font&gt;]
-
----
-
 # What is a pivot table?
 
 &gt; A PivotTable is a powerful tool to calculate, summarize, and analyze data that lets you see comparisons, patterns, and trends in your data.
 
 .right[*[Microsoft](https://support.office.com/en-us/article/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576#OfficeVersion=Windows)*]
 
+.center[![](https://media.giphy.com/media/4ZodeEffXWzfBs0aWG/source.mp4)]
+
 ---
 
+class: center, middle, inverse
+
 # Where does the data fight us?
+
+--
+
+### To present less data, we must first create more data.
 
 ???
 
@@ -101,17 +109,21 @@ Present too much data and users will get lost in the weeds and not see the fores
 
 ---
 
-class: center, middle, inverse
+# VLOOKUP
 
-# To present less data, we must first create more data.
+&gt; Use VLOOKUP when you need to find things in a table or a range by row. For example, look up a price of an automotive part by the part number, or find an employee name based on their employee ID.
 
-&lt;div style="width:50%;height:0;padding-bottom:56%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/UvwI1X7XkbXq0" width="50%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/firefly-drawing-motivation-UvwI1X7XkbXq0"&gt;&lt;/a&gt;&lt;/p&gt;
+.right[*[Microsoft](https://support.office.com/en-us/article/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1)*]
 
-.right[&lt;font color=#A31621&gt;*Giphy*&lt;/font&gt;]
+.center[=VLOOKUP(&lt;font color="red"&gt;A1&lt;/font&gt;, &lt;font color="blue"&gt;Lookup!A1:B7&lt;/font&gt;, &lt;font color="orange"&gt;2&lt;/font&gt;, &lt;font color="green"&gt;TRUE&lt;/font&gt;)]
 
----
+=**VLOOKUP**(
+- &lt;font color="red"&gt;Value to look up&lt;/font&gt;, 
+- &lt;font color="blue"&gt;Range to look for value&lt;/font&gt;, 
+- &lt;font color="orange"&gt;Column for the return value&lt;/font&gt;, 
+- &lt;font color="green"&gt;Type of match&lt;/font&gt;)
 
-# VLOOKUP!
+???
 
 Buckets for:
 
@@ -122,6 +134,296 @@ Buckets for:
 
 ---
 
+# Constituency
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Constituency &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Certificate &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Graduate &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Non-Degreed &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Undergraduate &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Faculty &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Faculty - Past &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Non-Alum Spouse of Alumni &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Parent - Current &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Parent - Past &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Staff &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Staff - Past &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Student &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Clean Constituency
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Constituency &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Clean Constituency &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Certificate &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Alumni &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Graduate &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Alumni &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Non-Degreed &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Alumni - Undergraduate &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Alumni &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Faculty &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Faculty/Staff &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Faculty - Past &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Non-Alum Spouse of Alumni &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Parent - Current &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Parent - Past &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Staff &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Faculty/Staff &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Staff - Past &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Student &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# absolute/relative references
+
+.pull-left[
+
+Relative references **can** move.
+
+.center[`A1`]
+
+Absolute references **can't** move.
+
+.center[`$A$1`]
+
+]
+
+.pull-right[
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; $A$2 &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; The column and the row do not change when copied. &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; A$2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; The row does not change when copied. &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; $A2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; The column does not change when copied. &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
+
+
+---
+
+# Ratings
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Rating &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; A - $2.5M to $5M &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; B - $1M to $2.5M &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; C - $500,000 to $1M &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; D - $250,000 to $499,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; E - $100,000 to $249,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; G - $50,000 to $99,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; H - $25,000 to $49,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I - $10,000 to $24,999 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Clean Ratings
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Rating &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Rating Bucket &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; A - $2.5M to $5M &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; PG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; B - $1M to $2.5M &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; PG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; C - $500,000 to $1M &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; MG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; D - $250,000 to $499,999 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; MG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; E - $100,000 to $249,999 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; MG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; G - $50,000 to $99,999 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; LG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; H - $25,000 to $49,999 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; LG &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; I - $10,000 to $24,999 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; LG &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+???
+
+What buckets of prospects make the most sense for your organization?
+
+---
+
+# Region
+
+Table &amp; formula
+
+---
+
+# Giving
+
+&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Gift Amount &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Gift Bucket &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Less than $1,000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $1,000 to $9,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 10000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $10,000 to $99,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 100000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $100,000 to $999,999 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1000000 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $1,000,000+ &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+???
+
+**When we write the VLOOKUP formula for giving, what is going to be different?**
+What we're matching isn't going to be exact. We're going for a "Price is Right" model - closest without going over.
+
+---
 # Pivot Table Summary
 
 Clean up.
