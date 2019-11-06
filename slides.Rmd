@@ -11,7 +11,7 @@ output:
     countIncrementalSlides: false
 ---
 
-class: middle, center
+class: middle, center, inverse
 
 background-color: #053C5E
 
@@ -19,19 +19,13 @@ background-color: #053C5E
 
 .pull-left[
 
-### <font color=white>2017 Talk Included:
-
-- VLOOKUP
-- CONCAT
-- DATEDIF
-- YEAR
-- RAND
-- Macros
-- Pivot Tables
+### VLOOKUP
+### DATEDIF | YEAR
+### CONCAT | RAND
+### Macros
+### Pivot Tables
 
 And more!
-
-</font>
 
 ]
 
@@ -125,31 +119,6 @@ Buckets for:
 
 ---
 
-# Constituency
-
-```{r constituency, echo = FALSE}
-constituency <- tibble::tribble(
-  ~"Constituency",
-                                "Alumni - Certificate",
-                                "Alumni - Graduate",
-                                "Alumni - Non-Degreed",
-                                "Alumni - Undergraduate",
-                                "Faculty",
-                                "Faculty - Past",
-                                "Friend",
-                                "Non-Alum Spouse of Alumni",
-                                "Parent - Current",
-                                "Parent - Past",
-                                "Staff",
-                                "Staff - Past",
-                                "Student"
-)
-
-kableExtra::kable_styling(knitr::kable(constituency), font_size = 18)
-```
-
----
-
 # Clean Constituency
 
 ```{r clean_constituency, echo = FALSE}
@@ -172,6 +141,8 @@ clean_constituency <- tibble::tribble(
 
 kableExtra::kable_styling(knitr::kable(clean_constituency), font_size = 18)
 ```
+
+.center[*`=VLOOKUP(B2,Constituency!A1:$B$14,2,FALSE)`*]
 
 ---
 
@@ -203,27 +174,6 @@ kableExtra::kable_styling(knitr::kable(references), font_size = 18)
 
 ]
 
-
----
-
-# Ratings
-
-```{r ratings, echo = FALSE}
-ratings <- tibble::tribble(
-  ~"Rating", 
-                              "A - $2.5M to $5M",
-                              "B - $1M to $2.5M",
-                              "C - $500,000 to $1M",
-                              "D - $250,000 to $499,999",
-                              "E - $100,000 to $249,999",
-                              "G - $50,000 to $99,999",
-                              "H - $25,000 to $49,999",
-                              "I - $10,000 to $24,999"
-  )
-
-kableExtra::kable_styling(knitr::kable(ratings), font_size = 18)
-```
-
 ---
 
 # Clean Ratings
@@ -244,15 +194,11 @@ clean_ratings <- tibble::tribble(
 kableExtra::kable_styling(knitr::kable(clean_ratings), font_size = 18)
 ```
 
+.center[*`=VLOOKUP(F2,Ratings!$A$1:$B$9,2,FALSE)`*]
+
 ???
 
 What buckets of prospects make the most sense for your organization?
-
----
-
-# Region
-
-Table & formula
 
 ---
 
@@ -274,16 +220,18 @@ clean_giving <- tibble::tribble(
 kableExtra::kable_styling(knitr::kable(clean_giving), font_size = 18)
 ```
 
+.center[*`=VLOOKUP(K2,Giving!$A$1:$B$8,2,TRUE)`*]
+
+### .center[What's different?]
+
+--
+
+.center[*=VLOOKUP(K2,Giving!$A$1:$B$8,2,<font color="red">TRUE)</font>*]
+
 ???
 
 **When we write the VLOOKUP formula for giving, what is going to be different?**
 What we're matching isn't going to be exact. We're going for a "Price is Right" model - closest without going over.
-
----
-# Pivot Table Summary
-
-Clean up.
-Multiple per page.
 
 ---
 

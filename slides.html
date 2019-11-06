@@ -20,7 +20,7 @@ class: center, middle, inverse, title-slide
 ---
 
 
-class: middle, center
+class: middle, center, inverse
 
 background-color: #053C5E
 
@@ -28,19 +28,13 @@ background-color: #053C5E
 
 .pull-left[
 
-### &lt;font color=white&gt;2017 Talk Included:
-
-- VLOOKUP
-- CONCAT
-- DATEDIF
-- YEAR
-- RAND
-- Macros
-- Pivot Tables
+### VLOOKUP
+### DATEDIF | YEAR
+### CONCAT | RAND
+### Macros
+### Pivot Tables
 
 And more!
-
-&lt;/font&gt;
 
 ]
 
@@ -134,59 +128,6 @@ Buckets for:
 
 ---
 
-# Constituency
-
-&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Constituency &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Alumni - Certificate &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Alumni - Graduate &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Alumni - Non-Degreed &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Alumni - Undergraduate &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Faculty &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Faculty - Past &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Friend &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Non-Alum Spouse of Alumni &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Parent - Current &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Parent - Past &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Staff &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Staff - Past &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Student &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
----
-
 # Clean Constituency
 
 &lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
@@ -248,6 +189,8 @@ Buckets for:
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+.center[*`=VLOOKUP(B2,Constituency!A1:$B$14,2,FALSE)`*]
+
 ---
 
 # absolute/relative references
@@ -286,45 +229,6 @@ Absolute references **can't** move.
 &lt;/table&gt;
 
 ]
-
-
----
-
-# Ratings
-
-&lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Rating &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; A - $2.5M to $5M &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; B - $1M to $2.5M &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; C - $500,000 to $1M &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; D - $250,000 to $499,999 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; E - $100,000 to $249,999 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; G - $50,000 to $99,999 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; H - $25,000 to $49,999 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; I - $10,000 to $24,999 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
 ---
 
@@ -373,15 +277,11 @@ Absolute references **can't** move.
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+.center[*`=VLOOKUP(F2,Ratings!$A$1:$B$9,2,FALSE)`*]
+
 ???
 
 What buckets of prospects make the most sense for your organization?
-
----
-
-# Region
-
-Table &amp; formula
 
 ---
 
@@ -418,16 +318,18 @@ Table &amp; formula
 &lt;/tbody&gt;
 &lt;/table&gt;
 
+.center[*`=VLOOKUP(K2,Giving!$A$1:$B$8,2,TRUE)`*]
+
+### .center[What's different?]
+
+--
+
+.center[*=VLOOKUP(K2,Giving!$A$1:$B$8,2,&lt;font color="red"&gt;TRUE)&lt;/font&gt;*]
+
 ???
 
 **When we write the VLOOKUP formula for giving, what is going to be different?**
 What we're matching isn't going to be exact. We're going for a "Price is Right" model - closest without going over.
-
----
-# Pivot Table Summary
-
-Clean up.
-Multiple per page.
 
 ---
 
