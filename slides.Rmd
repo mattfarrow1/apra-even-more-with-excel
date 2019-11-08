@@ -101,14 +101,16 @@ class: center, middle
 df <- tibble::tribble(
   ~"Column Name",
   "Lookup ID",
-  "Rating",
-  "Lifetime Giving",
   "Constituency",
   "Prospect Manager",
   "Prospect Status",
+  "Rating",
   "County",
   "ST",
-  "Metro Area"
+  "Metro Area",
+  "Last Gift Amount",
+  "Last Gift Date",
+  "Lifetime Giving"
 )
 
 kableExtra::kable_styling(knitr::kable(df), font_size = 18)
@@ -130,24 +132,20 @@ kableExtra::kable_styling(knitr::kable(df), font_size = 18)
 
 ```{r df_append, echo = FALSE}
 df_append <- tibble::tribble(
-  ~"Column Name",
-  "Lookup ID",
-  "Rating",
+  ~"VLOOKUP Columns",
+  "Clean Constituency",
   "Rating Bucket",
-  "Lifetime Giving",
-  "Giving Bucket",
-  "Constituency",
-  "Constituency Bucket",
-  "Prospect Manager",
-  "Prospect Status",
-  "County",
-  "ST",
+  "Rating Sort",
   "Region",
-  "Metro Area"
+  "Last Gift Range",
+  "Last Gift Sort",
+  "Last Gift Date Range",
+  "Last Gift Date Sort",
+  "Lifetime Gift Range",
+  "Lifetime Gift Date Sort"
 )
 
-x <- kableExtra::kable_styling(knitr::kable(df_append), font_size = 18)
-kableExtra::row_spec(x, c(3,5,7,12), bold = TRUE, color = "red")
+kableExtra::kable_styling(knitr::kable(df_append), font_size = 18)
 ```
 ]
 
@@ -172,15 +170,6 @@ kableExtra::row_spec(x, c(3,5,7,12), bold = TRUE, color = "red")
 - <font color="blue">Range to look for value</font>, 
 - <font color="orange">Column for the return value</font>, 
 - <font color="green">Type of match</font>)
-
-???
-
-Buckets for:
-
-- Constituency
-- Rating
-- Region
-- Giving
 
 ---
 
@@ -247,21 +236,22 @@ kableExtra::kable_styling(knitr::kable(clean_constituency), font_size = 18)
 
 ```{r clean_ratings, echo = FALSE}
 clean_ratings <- tibble::tribble(
-  ~"Rating", ~"Rating Bucket",
-                              "A - $2.5M to $5M",	"PG",
-                              "B - $1M to $2.5M",	"PG",
-                              "C - $500,000 to $1M", "MG",
-                              "D - $250,000 to $499,999",	"MG",
-                              "E - $100,000 to $249,999",	"MG",
-                              "G - $50,000 to $99,999",	"LG",
-                              "H - $25,000 to $49,999",	"LG",
-                              "I - $10,000 to $24,999",	"LG"
+  ~"Rating", ~"Rating Bucket", ~"Rating Sort",
+                              "A - $2.5M to $5M",	"PG", 1,
+                              "B - $1M to $2.5M",	"PG", 2,
+                              "C - $500,000 to $1M", "MG", 3, 
+                              "D - $250,000 to $499,999",	"MG", 4, 
+                              "E - $100,000 to $249,999",	"MG", 5,
+                              "G - $50,000 to $99,999",	"LG", 6, 
+                              "H - $25,000 to $49,999",	"LG", 7, 
+                              "I - $10,000 to $24,999",	"LG", 8
 )
 
 kableExtra::kable_styling(knitr::kable(clean_ratings), font_size = 18)
 ```
 
-.center[*`=VLOOKUP(F2,Ratings!$A$1:$B$9,2,FALSE)`*]
+.center[**Bucket:** *`=VLOOKUP($F2,Ratings!$A$1:$C$9,2,FALSE)`*]
+.center[**Sort:** *`=VLOOKUP($F2,Ratings!$A$1:$C$9,3,FALSE)`*]
 
 ???
 
@@ -276,24 +266,27 @@ What buckets of prospects make the most sense for your organization?
 options(scipen = 999999)
 
 clean_giving <- tibble::tribble(
-  ~"Gift Amount", ~"Gift Bucket",
-                              1,	"Less than $1,000",
-                              1000,	"$1,000 to $9,999",
-                              10000, "$10,000 to $99,999",
-                              100000,	"$100,000 to $999,999",
-                              1000000,	"$1,000,000+"
+  ~"Gift Amount", ~"Gift Bucket", ~"Gift Sort",
+                              0, "No Giving", 6,
+                              1,	"Less than $1,000", 5,
+                              1000,	"$1,000 to $9,999", 4, 
+                              10000, "$10,000 to $99,999", 3, 
+                              100000,	"$100,000 to $999,999", 2, 
+                              1000000,	"$1,000,000+", 1
 )
 
 kableExtra::kable_styling(knitr::kable(clean_giving), font_size = 18)
 ```
 
-.center[*`=VLOOKUP(K2,Giving!$A$1:$B$8,2,TRUE)`*]
+.center[**Bucket:** *`=VLOOKUP($K2,Giving!$A$1:$C$8,2,TRUE)`*]
+.center[**Sort:** *`=VLOOKUP($K2,Giving!$A$1:$C$8,3,TRUE)`*]
 
 ### .center[What's different?]
 
 --
 
-.center[*=VLOOKUP(K2,Giving!$A$1:$B$8,2,<font color="red">TRUE)</font>*]
+.center[*=VLOOKUP($K2,Giving!$A$1:$C$8,2,<font color="red">TRUE)</font>*]
+.center[*=VLOOKUP($K2,Giving!$A$1:$C$8,3,<font color="red">TRUE)</font>*]
 
 ???
 

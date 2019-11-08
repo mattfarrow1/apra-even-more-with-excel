@@ -117,12 +117,6 @@ class: center, middle
    &lt;td style="text-align:left;"&gt; Lookup ID &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Rating &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Lifetime Giving &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Constituency &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -132,6 +126,9 @@ class: center, middle
    &lt;td style="text-align:left;"&gt; Prospect Status &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Rating &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; County &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
@@ -139,6 +136,15 @@ class: center, middle
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Metro Area &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Last Gift Amount &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Last Gift Date &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Lifetime Giving &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -160,48 +166,39 @@ class: center, middle
 &lt;table class="table" style="font-size: 18px; margin-left: auto; margin-right: auto;"&gt;
  &lt;thead&gt;
   &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Column Name &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; VLOOKUP Columns &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Lookup ID &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Clean Constituency &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Rating &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Rating Bucket &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Rating Bucket &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Rating Sort &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Lifetime Giving &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Region &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Giving Bucket &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Last Gift Range &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Constituency &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Last Gift Sort &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Constituency Bucket &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Last Gift Date Range &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Prospect Manager &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Last Gift Date Sort &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Prospect Status &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lifetime Gift Range &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; County &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; ST &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;font-weight: bold;color: red !important;"&gt; Region &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Metro Area &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Lifetime Gift Date Sort &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -228,15 +225,6 @@ class: center, middle
 - &lt;font color="blue"&gt;Range to look for value&lt;/font&gt;, 
 - &lt;font color="orange"&gt;Column for the return value&lt;/font&gt;, 
 - &lt;font color="green"&gt;Type of match&lt;/font&gt;)
-
-???
-
-Buckets for:
-
-- Constituency
-- Rating
-- Region
-- Giving
 
 ---
 
@@ -357,45 +345,55 @@ Absolute references **can't** move.
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Rating &lt;/th&gt;
    &lt;th style="text-align:left;"&gt; Rating Bucket &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Rating Sort &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; A - $2.5M to $5M &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; PG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; B - $1M to $2.5M &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; PG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; C - $500,000 to $1M &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; MG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; D - $250,000 to $499,999 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; MG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; E - $100,000 to $249,999 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; MG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; G - $50,000 to $99,999 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; LG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; H - $25,000 to $49,999 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; LG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; I - $10,000 to $24,999 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; LG &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-.center[*`=VLOOKUP(F2,Ratings!$A$1:$B$9,2,FALSE)`*]
+.center[**Bucket:** *`=VLOOKUP($F2,Ratings!$A$1:$C$9,2,FALSE)`*]
+.center[**Sort:** *`=VLOOKUP($F2,Ratings!$A$1:$C$9,3,FALSE)`*]
 
 ???
 
@@ -410,39 +408,52 @@ What buckets of prospects make the most sense for your organization?
   &lt;tr&gt;
    &lt;th style="text-align:right;"&gt; Gift Amount &lt;/th&gt;
    &lt;th style="text-align:left;"&gt; Gift Bucket &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Gift Sort &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; No Giving &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Less than $1,000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 1000 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; $1,000 to $9,999 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 10000 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; $10,000 to $99,999 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 100000 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; $100,000 to $999,999 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 1000000 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; $1,000,000+ &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-.center[*`=VLOOKUP(K2,Giving!$A$1:$B$8,2,TRUE)`*]
+.center[**Bucket:** *`=VLOOKUP($K2,Giving!$A$1:$C$8,2,TRUE)`*]
+.center[**Sort:** *`=VLOOKUP($K2,Giving!$A$1:$C$8,3,TRUE)`*]
 
 ### .center[What's different?]
 
 --
 
-.center[*=VLOOKUP(K2,Giving!$A$1:$B$8,2,&lt;font color="red"&gt;TRUE)&lt;/font&gt;*]
+.center[*=VLOOKUP($K2,Giving!$A$1:$C$8,2,&lt;font color="red"&gt;TRUE)&lt;/font&gt;*]
+.center[*=VLOOKUP($K2,Giving!$A$1:$C$8,3,&lt;font color="red"&gt;TRUE)&lt;/font&gt;*]
 
 ???
 
